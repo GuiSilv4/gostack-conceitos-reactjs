@@ -1,18 +1,13 @@
 import React from "react";
 
-import "../styles.css";
-
-const Repository = ({ title, id, handleRemoveRepository }) => {
-
+const Repository = ({ title, id, onClick }) => {
   return (
-    <ul data-testid="repository-list">
-      <li>
-        {title}
-        <button onClick={() => handleRemoveRepository(id)}>
-          Remover
+    <li>
+      {title}
+      <button onClick={() => onClick(id)}>
+        Remover
       </button>
-      </li>
-    </ul>
+    </li>
   )
 };
 
